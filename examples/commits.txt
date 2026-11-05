@@ -1,0 +1,10 @@
+a1b2c3d feat(booking): let pet owners reschedule without calling the salon
+b2c3d4e feat(reminders): send an SMS reminder 24 hours before the appointment
+c3d4e5f fix(calendar): show the correct slots when the salon closes early
+d4e5f6a perf(search): load available groomers twice as fast on mobile
+e5f6a7b feat(payments)!: require card confirmation for appointments over $100
+f6a7b8c chore: bump dependencies
+a7b8c9d ci: cache pip downloads
+b8c9d0e test(booking): cover the 24-hour rescheduling rule
+c9d0e1f docs: update the setup guide
+d0e1f2a Merge pull request #42 from feature/reminders
