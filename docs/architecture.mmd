@@ -1,0 +1,23 @@
+flowchart LR
+    PO([Product Owner]) -->|request, backlog, commits| Claude[Claude Desktop / Claude Code]
+    Claude -->|loads| Skills["skills/<br/>write-user-story<br/>refine-backlog<br/>prioritize-rice<br/>release-notes"]
+    Claude -->|MCP over stdio| MCP["po-kit-mcp<br/>MCP server"]
+    PO -->|terminal or CI| CLI["po-kit CLI"]
+    Visitor([Visitor]) -->|browser| App["Streamlit demo<br/>app.py"]
+
+    subgraph Core["po_skills_kit core (no runtime dependencies)"]
+        RICE["rice.py<br/>RICE scoring + validation"]
+        Lint["story_lint.py<br/>user story rules"]
+        Notes["release_notes.py<br/>Conventional Commits"]
+    end
+
+    MCP --> Core
+    CLI --> Core
+    App --> Core
+    Examples[("examples/<br/>fictional data")] --> CLI
+    Examples --> App
+    Env[".env (optional)<br/>PO_KIT_LOG_LEVEL"] -.-> MCP
+
+    GH["GitHub Actions CI<br/>ruff · pytest · eval · smoke test"] -.->|every push and PR| Core
+    GH -.->|green main| Cloud["Streamlit Community Cloud"]
+    Cloud -->|hosts| App
