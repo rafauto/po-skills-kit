@@ -10,7 +10,7 @@ Claude skills for Product Owners, plus a small MCP server that does the checking
 
 **Live demo:** _coming soon_ <!-- replace with the Streamlit Community Cloud URL -->. It runs without an account or an API key, using fictional data.
 
-![The Streamlit demo ranks a fictional backlog with RICE, checks a user story and builds release notes](docs/screenshots/demo.gif)
+<!-- Add after recording: ![The Streamlit demo ranks a fictional backlog with RICE, checks a user story and builds release notes](docs/screenshots/demo.gif) -->
 
 ## Why I built this
 
