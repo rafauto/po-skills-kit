@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "po-skills-kit"
+version = "0.1.0"
+description = "Claude skills plus a small MCP server that help Product Owners write user stories, refine backlogs, prioritize with RICE and draft release notes."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Rafaela Uto" }]
+keywords = ["product-owner", "product-management", "claude", "mcp", "user-stories", "rice"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Office/Business",
+]
+# The core library has no runtime dependencies on purpose: the CLI works on a bare Python.
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["mcp>=2.3,<3"]
+app = ["streamlit>=1.40", "pandas>=2.0", "altair>=5.0"]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.scripts]
+po-kit = "po_skills_kit.cli:main"
+po-kit-mcp = "po_skills_kit.mcp_server:main"
+
+[project.urls]
+Homepage = "https://github.com/rafauto/po-skills-kit"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
