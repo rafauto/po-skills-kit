@@ -4,13 +4,13 @@
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](pyproject.toml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Status](https://img.shields.io/badge/status-MVP%20v0.1.0-orange)](#project-status-and-roadmap)
-<!-- Add after deploy: [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](<demo-url>) -->
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://po-skills-kit.streamlit.app/)
 
 Claude skills for Product Owners, plus a small MCP server that does the checking and the math. You use them to write user stories, refine a backlog, prioritize with RICE and draft release notes.
 
-**Live demo:** _coming soon_ <!-- replace with the Streamlit Community Cloud URL -->. It runs without an account or an API key, using fictional data.
+**Live demo:** [po-skills-kit.streamlit.app](https://po-skills-kit.streamlit.app/). It runs without an account or an API key, using fictional data.
 
-<!-- Add after recording: ![The Streamlit demo ranks a fictional backlog with RICE, checks a user story and builds release notes](docs/screenshots/demo.gif) -->
+![The Streamlit demo ranks a fictional backlog with RICE, checks a user story and builds release notes](docs/screenshots/demo.gif)
 
 ## Why I built this
 
