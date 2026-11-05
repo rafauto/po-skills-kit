@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ready",
+    "story": "As a pet owner, I want to reschedule in the app, so that I don't call the salon.\nGiven an appointment in 3 days\nWhen I pick a new slot\nThen the appointment moves to it",
+    "expected_rules": [],
+    "expected_pass": true
+  },
+  {
+    "id": "no-narrative",
+    "story": "Reschedule feature\nGiven an appointment\nWhen I pick a slot\nThen it moves",
+    "expected_rules": ["narrative-format"],
+    "expected_pass": false
+  },
+  {
+    "id": "no-benefit",
+    "story": "As a pet owner, I want to reschedule in the app.\nGiven an appointment\nWhen I pick a slot\nThen it moves",
+    "expected_rules": ["narrative-format"],
+    "expected_pass": false
+  },
+  {
+    "id": "no-criteria",
+    "story": "As a pet owner, I want a waitlist, so that I get a slot if someone cancels.",
+    "expected_rules": ["acceptance-criteria"],
+    "expected_pass": false
+  },
+  {
+    "id": "missing-then",
+    "story": "As a pet owner, I want a waitlist, so that I get a slot.\nGiven a full day\nWhen I tap Join",
+    "expected_rules": ["complete-scenario"],
+    "expected_pass": false
+  },
+  {
+    "id": "generic-role",
+    "story": "As a user, I want a waitlist, so that I get a slot.\nGiven a full day\nWhen I tap Join\nThen I see my position",
+    "expected_rules": ["specific-role"],
+    "expected_pass": true
+  },
+  {
+    "id": "two-goals",
+    "story": "As a pet owner, I want to pay online and earn points, so that I save money.\nGiven a booking\nWhen I pay\nThen I see a receipt",
+    "expected_rules": ["single-goal"],
+    "expected_pass": true
+  },
+  {
+    "id": "vague",
+    "story": "As a pet owner, I want to search groomers, so that I find one.\nGiven the search page\nWhen I type a name\nThen results load fast and look intuitive",
+    "expected_rules": ["testable-language"],
+    "expected_pass": true
+  },
+  {
+    "id": "markdown-bullets",
+    "story": "## Rebook\n\n**As a** returning pet owner, **I want** to rebook in one tap, **so that** I save time.\n\n- **Given** a past visit\n- **When** I tap Rebook\n- **Then** I see the next free slots",
+    "expected_rules": [],
+    "expected_pass": true
+  },
+  {
+    "id": "everything-wrong",
+    "story": "As a user, I want to pay and get points, so that it's easy.\nGiven I pay\nThen it works properly",
+    "expected_rules": ["specific-role", "single-goal", "complete-scenario", "testable-language"],
+    "expected_pass": false
+  }
+]
