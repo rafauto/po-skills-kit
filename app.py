@@ -63,7 +63,7 @@ def render_rice_tab() -> None:
         .mark_bar()
         .encode(
             x=alt.X("score:Q", title="RICE score"),
-            y=alt.Y("item:N", sort="-x", title=None),
+            y=alt.Y("item:N", sort="-x", title=None, axis=alt.Axis(labelLimit=260)),
             tooltip=["rank", "item", "score"],
         )
     )
