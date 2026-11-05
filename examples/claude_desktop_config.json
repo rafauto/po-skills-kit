@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "po-skills-kit": {
+      "command": "/absolute/path/to/po-skills-kit/.venv/bin/po-kit-mcp"
+    }
+  }
+}
